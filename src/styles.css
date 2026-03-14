@@ -117,9 +117,40 @@ a:hover {
   justify-content: flex-start;
   padding: 24px 16px;
   text-align: center;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.container .box:hover {
+  box-shadow: 0 4px 16px rgba(78, 86, 126, 0.15);
+  transform: translateY(-2px);
 }
 
 img.socialIcon {
   height: 30px;
   width: 30px;
+  transition: opacity 0.2s ease;
+}
+
+img.socialIcon:hover {
+  opacity: 0.75;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 4rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+    padding: 0 1rem;
+  }
+
+  section.padding {
+    padding: 3rem 0;
+  }
 }
